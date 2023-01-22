@@ -25,6 +25,7 @@ const now = new Date();
 
 // Find the first Sunday of the current month
 const firstSunday = new Date(now.getFullYear(), now.getMonth(), 1);
+	
 while (firstSunday.getDay() !== 0) {
     firstSunday.setDate(firstSunday.getDate() + 1);
 }
@@ -39,15 +40,15 @@ if (now.getDate() === thirdSunday.getDate()) {
     document.getElementById("meeting-text").innerHTML = "The monthly meeting is today!";
 } else if (now.getDate() > thirdSunday.getDate()) {
     // Find the third Sunday of the next month
-    const nextThirdSunday = new Date(thirdSunday);
-    nextThirdSunday.setMonth(nextThirdSunday.getMonth() + 1);
+    const nextThirdSunday = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    while (nextThirdSunday.getDay() !== 0) {
+        nextThirdSunday.setDate(nextThirdSunday.getDate() + 1);
+    }
     // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the next month
     document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextThirdSunday.toDateString()}.`;
 } else {
     // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the month
-    const nextMeeting = new Date(thirdSunday);
-    nextMeeting.setMonth(nextMeeting.getMonth() + (now > thirdSunday ? 1 : 0));
-    document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextMeeting.toDateString()}.`;
+    document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${thirdSunday.toDateString()}.`;
 }
 }	
 </script>
