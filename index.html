@@ -16,7 +16,39 @@
 
     <meta name="GENERATOR" content="MSHTML 10.00.9200.16843">
 </head>
+<script type="text/javascript">
+	
+// Get the current date
+const now = new Date();
 
+// Find the first Sunday of the current month
+const firstSunday = new Date(now.getFullYear(), now.getMonth(), 1);
+while (firstSunday.getDay() !== 0) {
+    firstSunday.setDate(firstSunday.getDate() + 1);
+}
+
+// Find the third Sunday of the current month
+const thirdSunday = new Date(firstSunday);
+thirdSunday.setDate(thirdSunday.getDate() + 14);
+
+// Check if the current date is the third Sunday of the month
+if (now.getDate() === thirdSunday.getDate()) {
+    // Update the text of the webpage to indicate that the meeting is today
+    document.getElementById("meeting-text").innerHTML = "The monthly meeting is today!";
+} else if (now.getDate() > thirdSunday.getDate()) {
+    // Find the third Sunday of the next month
+    const nextThirdSunday = new Date(thirdSunday);
+    nextThirdSunday.setMonth(nextThirdSunday.getMonth() + 1);
+    // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the next month
+    document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextThirdSunday.toDateString()}.`;
+} else {
+    // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the month
+    const nextMeeting = new Date(thirdSunday);
+    nextMeeting.setMonth(nextMeeting.getMonth() + (now > thirdSunday ? 1 : 0));
+    document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextMeeting.toDateString()}.`;
+}
+	
+</script>
 <body style="background-color: rgb(255, 255, 255);" alink="#dc4b05" link="#005100" vlink="#7d5f00">
     <div align="center">
       <!-- Open new photo gallery header
@@ -205,8 +237,9 @@ interesting information about the hobby.<br>
 										<td>
                       <center>
 						  <font face="Verdana" size="3" color="#44CC44">
-									    <b><p>General Meeting:<br>Sunday, November 19th - 11AM to 2PM</p></b></font>
-									    <p><font face="Verdana" size="2" color="#0066cc">Shop time for club members is on a regular schedule of Saturdays, 10AM to 2PM
+									    <b><p>General Meeting:<br>Third Sunday of each month - 11AM to 2PM</p></b></font>
+									    <b><p id="meeting-text"></p></b>
+			                                                    <p><font face="Verdana" size="2" color="#0066cc">Shop time for club members is on a regular schedule of Saturdays, 10AM to 2PM
 										  </font></p></center>
 										</td>
 										</tr>
