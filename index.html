@@ -16,8 +16,9 @@
 
     <meta name="GENERATOR" content="MSHTML 10.00.9200.16843">
 </head>
-<body style="background-color: rgb(255, 255, 255);" alink="#dc4b05" link="#005100" vlink="#7d5f00">
+<body style="background-color: rgb(255, 255, 255);" alink="#dc4b05" link="#005100" vlink="#7d5f00" onload="updateMeetingText()">
 <script type="text/javascript">
+function updateMeetingText() {
 	
 // Get the current date
 const now = new Date();
@@ -48,7 +49,7 @@ if (now.getDate() === thirdSunday.getDate()) {
     nextMeeting.setMonth(nextMeeting.getMonth() + (now > thirdSunday ? 1 : 0));
     document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextMeeting.toDateString()}.`;
 }
-	
+}	
 </script>
     <div align="center">
       <!-- Open new photo gallery header
