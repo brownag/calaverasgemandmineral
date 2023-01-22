@@ -44,6 +44,7 @@ if (now.getDate() === thirdSunday.getDate()) {
     while (nextThirdSunday.getDay() !== 0) {
         nextThirdSunday.setDate(nextThirdSunday.getDate() + 1);
     }
+    nextThirdSunday.setDate(nextThirdSunday.getDate() + 14);
     // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the next month
     document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextThirdSunday.toDateString()}.`;
 } else {
