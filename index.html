@@ -1,405 +1,74 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-    <meta content="IE=5.0000" http-equiv="X-UA-Compatible">
-    <title>Calaveras Gem &amp; Mineral Society, Angels Camp, CA</title>
-
-    <meta http-equiv="Content-Language" content="en-us">
-
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-
-    <style type="text/css">
-
-    </style>
-
-    <meta name="GENERATOR" content="MSHTML 10.00.9200.16843">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Calaveras Gem & Mineral Society</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- External libraries for markdown parsing and sanitization -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
 </head>
-<body style="background-color: rgb(255, 255, 255);" alink="#dc4b05" link="#005100" vlink="#7d5f00" onload="updateMeetingText()">
-<script type="text/javascript">
-function updateMeetingText() {
-	
-// Get the current date
-const now = new Date();
-
-// Find the first Sunday of the current month
-const firstSunday = new Date(now.getFullYear(), now.getMonth(), 1);
-	
-while (firstSunday.getDay() !== 0) {
-    firstSunday.setDate(firstSunday.getDate() + 1);
-}
-
-// Find the third Sunday of the current month
-const thirdSunday = new Date(firstSunday);
-thirdSunday.setDate(thirdSunday.getDate() + 14);
-
-// Check if the current date is the third Sunday of the month
-if (now.getDate() === thirdSunday.getDate()) {
-    // Update the text of the webpage to indicate that the meeting is today
-    document.getElementById("meeting-text").innerHTML = "The monthly meeting is today!";
-} else if (now.getDate() > thirdSunday.getDate()) {
-    // Find the third Sunday of the next month
-    const nextThirdSunday = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-    while (nextThirdSunday.getDay() !== 0) {
-        nextThirdSunday.setDate(nextThirdSunday.getDate() + 1);
-    }
-    nextThirdSunday.setDate(nextThirdSunday.getDate() + 14);
-    // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the next month
-    document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${nextThirdSunday.toDateString()}.`;
-} else {
-    // Update the text of the webpage to indicate that the next meeting is on the third Sunday of the month
-    document.getElementById("meeting-text").innerHTML = `The next monthly meeting is on ${thirdSunday.toDateString()}.`;
-}
-}	
-</script>
-    <div align="center">
-      <!-- Open new photo gallery header
-<table style="text-align: left; background-color: rgb(102, 255, 153);"
-border="1" cellpadding="2" cellspacing="2">
-<tbody>
-  <tr>
-    <td style="vertical-align: top;">
-    <div style="text-align: center;"><big><big><span
-style="font-weight: bold;">Want to see pictures from this year's show?</span></big></big><br>
-    <big><big><big>Check out our new Photo Gallery!</big></big></big><br>
-      <big>
-        <br>
-        <a  href="http://calaverasgemandmineral.net/coppermine/"><u>CLICK HERE to visit photo gallery</u></a><br>
-      </big>
-      <br>
-    </div>
-    </td>
-  </tr>
-</tbody>
-</table>
-<table style="width: 700px;" id="table1Main" border="0" cellpadding="0"
-cellspacing="0">
-</table>
--->
-	    <!-- start tailgate header 
-<table style="text-align: left; background-color: rgb(102, 255, 153);"
- border="1" cellpadding="2" cellspacing="2">
-  <tbody>
-    <tr>
-      <td style="vertical-align: top;">
-      <div style="text-align: center;"><big><big><span
- style="font-weight: bold;">Join us at our Tailgate Sale</span></big></big><br>
-      <big><big><big>Saturday, November 5th, 2022&nbsp; <br>9:00 am to 4:00 pm</big></big></big><br>
-        <big>
-          <font style="font-weight: bold;" color="#005100" face="Verdana" size="4">
-            <small><span style="color: black;">This is event is held at our clubhouse: 2549 Meacham Ranch Road in Angels Camp. </span></small>
-          </font>
-	  <center><img width = "400px" src="images/tailgateNov2022.jpg"/></center>
-          <br>
-          <a  href="map_clubhouse.html"><u>MAP TO CLUBHOUSE</u></a><br>
-          <font style="font-weight: bold;" color="#005100" face="Verdana" size="4">
-            <small><span style="color: black;">
-              Club members bring slabs, rough, specimens, beautiful jewelry and more to swap. Come check out the great deals. Please send any inquiries to <a href="mailto:calaverasgemandmineralsociety@gmail.com">calaverasgemandmineralsociety@gmail.com</a> or contact us on <a href="https://www.facebook.com/CalaverasGemAndMineralSociety">Facebook</a>. 
-            </span></small>
-          </font>
-        </big>
-        <br>
+<body>
+  <div id="site-container">
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <img src="images/logo150.jpg" alt="Calaveras Gem &amp; Mineral Logo" height="149" width="150">
       </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<table style="width: 700px;" id="table1Main" border="0" cellpadding="0"
- cellspacing="0">
-</table>
-  Close tailgate header -->
+      <div class="header-content">
+        <h1 class="site-title">Calaveras Gem &amp; Mineral Society</h1>
+        <p class="site-subtitle">Angels Camp, California</p>
+        <p class="header-tagline">Established in 1948, the Calaveras Gem and Mineral Society continues to flourish and carry out its purpose of sharing knowledge and interests in Rocks and Minerals, both among members and with the public. Calaveras Gem and Mineral Society is a member of the California Federation of Mineralogical Societies (CFMS)</p>
+      </div>
+    </header>
 
-<!-- show header 
-<div align="center">
-<center>
-<table
- style="border-collapse: collapse; background-color: rgb(255, 255, 0); width: 900px;"
- border="0" bordercolor="#111111" cellpadding="4" cellspacing="4">
-  <tbody>
-    <tr>
-      <td style="width: 100%; text-align: center; background-color: rgb(0, 102, 0);"><a
- href="show.html"><big><big><b><font color="#ffff00" face="Verdana"
- size="2"><big><big>Join us for our</big></big></font></b><font
- color="#ffff00" face="Verdana" size="2"><big><big><br>
-      </big></big></font></big></big></a> <a href="show.html"><big><big><font
- face="Verdana" size="4"><big><big><b><font color="#ffff00">Annual Gem
-&amp; Jewelry Show &amp; Sale<br>
-March 23 - 24, 2024</font></b></big></big></font></big></big><font
- face="Verdana" size="4"><font color="#006600"><br>
-      </font>
-      <a href="docs/CGMS_Gem_Show-Flyer-Color-2024.pdf"><img width="50%" src="images/gem-show-flyer-2024.jpg"/></a><br><br>
-      <big><font color="#ffffff" face="Arial"> <b>Calaveras
-County Fairgrounds ("Frogtown")<br>2456 Gunclub Road, off Highway 49, Angels Camp, CA</b></font></big></font></a><br>
-      <br><br>
- <font style="color: rgb(255, 255, 51); background-color: yellow;" face="Verdana" size="3"><i><b><u>
-   <a href="docs/CGMS_Gem_Show-Guide-Color-2024.pdf">Check out the PDF guide to our 2024 show!</font></a></u></b></i></font><br>
- <font style="color: rgb(255, 255, 51); background-color: yellow;"
- face="Verdana" size="3"><i><b><br><u><a
- href="show.html">Click here to view the show webpage.</a></u></b></i></font>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</center>
-</div>
-end show header  -->
-<div align="center">
-<center>
-	    
-<!--<table
- style="border-collapse: collapse; background-color: rgb(132,132,132); width: 900px;"
- border="0" bordercolor="#111111" cellpadding="4" cellspacing="4">
-  <tbody>
-    <tr>
-      <td style="width: 100%; text-align: center; background-color: rgb(132,132,132);">
-      <font color="#ffff00" face="Verdana" size="4">Gem Show CANCELED<br></font>
-        <font color="#ffff00" face="Verdana" size="3">The 2020 Gem Show in Angels Camp has been CANCELED due to public health concerns.</font>
+    <!-- Main Navigation -->
+    <nav id="main-nav" class="main-nav">
+      <!-- Populated by JavaScript -->
+    </nav>
 
-      </td>
-    </tr>
-  </tbody>
-</table>-->
-</center>
-</div>
-<br>
-        <div align="center"><img src="images/logo150.jpg" alt="Calaveras Gem &amp; Mineral Logo" border="0" height="149" width="150"><i><b><font color="#005100" face="Verdana" size="1">&nbsp;</font></b></i>
-            <br>
-        </div>
-        <close tailgate="" headder=""></close>
-        <table style="width: 700px;" id="table1Main" border="0" cellpadding="0" cellspacing="0">
-        </table>
-        <div style="text-align: center;"><big><close tailgate="" headder=""><i><b><font color="#005100" face="Verdana" size="5"><big>Calaveras Gem &amp;
-Mineral
-Society</big></font>
-            </b>
-            </i>
-            </close>
-            </big>
-            <br>
-            <close tailgate="" headder=""></close>
-        </div>
-        <table style="width: 700px;" id="table1Main" border="0" cellpadding="0" cellspacing="0">
-        </table>
-        <div style="text-align: center;">
-            <close tailgate="" headder=""><i><b><font color="#005100" face="Verdana" size="4">Angels Camp, California</font></b></i></close>
-        </div>
-        <close tailgate="" headder=""></close>
-        <table style="width: 700px;" id="table1Main" border="0" cellpadding="0" cellspacing="0">
-        </table>
-        <table style="width: 694px; height: 61px;" id="table20" border="0">
-            <tbody>
-                <tr>
-                    <td><font face="Verdana" size="1">Established in 1948, the Calaveras Gem and Mineral Society continues to flourish and carry out its purpose of sharing knowledge and interests in Rocks and Minerals, both among members and with the public. Calaveras Gem and Mineral Society is a member of the California Federation of Mineralogical Societies (CFMS)</font></td>
-                </tr>
-            </tbody>
-        </table>
-        <table id="table15" bordercolorlight="#eada68" bgcolor="#f2eb8c" border="1" cellpadding="2" cellspacing="0" width="700">
-            <tbody>
-                <tr>
-                    <td align="center" width="87"><b><font face="Verdana" size="1"><a href="index.html"><font color="#dc4b05">Home</font></a></font></b></td>
-                    <td align="center" width="87"><b><font face="Verdana" size="1"><a href="history.html">History</a></font></b></td>
-                    <td align="center" width="87"><b><font face="Verdana" size="1"><a href="membership.html">Membership</a></font></b></td>
-                    <td align="center" width="87"><b><font face="Verdana" size="1"><a href="lapidary.html">Lapidary</a></font></b></td>
-                    <td align="center" width="87"><b><font face="Verdana" size="1"><a href="field.html">Field Trips</a></font></b></td>
-                    <td align="center" width="87"><b><font face="Verdana" size="1"><a href="show.html">Gem Show</a></font></b></td>
-                    <td align="center" width="88"><b><font face="Verdana" size="1"><a href="links.html">Links</a></font></b></td>
-                    <td align="center" width="88"><b><font face="Verdana" size="1"><a href="contact.html">Contact</a></font></b></td>
-                </tr>
-            </tbody>
-        </table>
-        <table style="width: 700px; height: 783px;" id="table12" border="0" cellpadding="0" cellspacing="0">
-            <tbody>
-                <tr>
-                    <td colspan="2" style="width: 700px; vertical-align: top; height: 94px;">
-                        <table id="table17" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody>
-                                <tr>
-                                    <td align="right"><a href="mem-enter.html"><b><font face="Verdana" size="1"><u>MEMBERS AREA</u></font></b></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="text-align: center;">
-                            <br>
-                        </div>
-                        <b><i><font color="#005100" face="Verdana" size="4">Monthly
-Meetings<br>
-      </font></i></b><font face="Verdana" size="2">The Calaveras
-Gem &amp; Mineral Society holds meetings on the <b>third Sunday of the
-month</b>. At each club meeting there is a
-potluck, business meeting, main presentation, and members share other
-interesting information about the hobby.<br>
-      </font><font face="Verdana" size="1">&nbsp;</font></td>
-                </tr>
-                <!--- MEETING PARAGRAPH -->
-                <tr>
-                    <td align="left" height="236" valign="top" width="335">
-											<table>
-												<tr>
-													<td>
-                    	<img alt="Calaveras Jumping Frog" src="images/frog_hammock.jpg" style="align: left;">
-										</td>
-										<td>
-                      <center>
-						  <font face="Verdana" size="3" color="#44CC44">
-									    <b><p>General Meeting:<br>Third Sunday of each month - 11AM to 2PM</p></b>
-									    <b><p id="meeting-text"></p></b></font>
-			                                                    <p><font face="Verdana" size="2" color="#0066cc">Shop time for club members is on a regular schedule of Saturdays, 10AM to 2PM
-										  </font></p></center>
-										</td>
-										</tr>
-										</table>
-										</td>
-                      <!-- board meetings
-                      <br>
-                      <font face="Verdana" size="2"><i>Board meeting: 10:00 AM.<br>All members may attend.</i></font>
-                      <br>
-                      board meetings end -->
-                      <!--<br>
-                      <font face="Verdana" size="2">Welcoming begins at 11:00 AM. <strike>Potluck Lunch begins at 12:00 PM.</strike> Lunch is followed by the general meeting.
-                      <br>
-                      <b><font face="Verdana" size="2" color="#0066cc">Visitors are always welcome.</font></b>
-		      <br><br>
-                      <br>Meetings are held at the society's clubhouse: <br><i>2500 Meacham Ranch Road<br>Angels Camp, California</i> <b>(<a href="map_clubhouse.html">MAP</a>)</b></font>
-		    </td>-->
-                    <!---CLOSE MEETINGS -->
-                    <!---CLUBHOUSE-->
-                    <td align="center" height="236" valign="top" width="351">
-                        <div align="right">
-                            <table id="table21" border="0" cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td> <img alt="Club House" src="images/ch_blr.jpg" height="160" width="325">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div align="center">
-                                                <table id="table24" border="0" cellpadding="0" cellspacing="3" width="300">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td valign="top">
-                                                                <p align="justify">
-                                                                  <font face="Verdana" size="1">
-                                                                    The Calaveras Gem and Mineral Society's clubhouse is nestled
-                                                                    among the oak trees in the Mother Lode foothills near Angels Camp,
-                                                                    California<br>
-                                                                  </font>
-                                                                </p>
-                                                                <div align="center">
-                                                                  <font face="Verdana" size="1">
-                                                                    <br>
-                                                                    <a href="map_clubhouse.html">
-                                                                      <b>MAP TO CLUBHOUSE</b>
-                                                                    </a>
-                                                                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                                                                    <a href="history.html">
-                                                                      <b>CLUB HISTORY</b>
-                                                                    </a>
-                                                                    <br>
-                                                                    <a href="membership.html">
-                                                                      <b>MEMBERSHIP</b>
-                                                                    </a>
-                                                                    <br>
-                                                                    <br>
-                                                                    <a href="mem-enter.html">
-                                                                      <b>MEMBERS AREA</b>
-                                                                    </a>
-                                                                  </font>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" height="437" valign="top" width="718">
-                        <table id="table25" border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody>
-															<!--<tr>
-																	<td colspan="2" height="94">
-																		<b><i><font color="#005100" face="Verdana" size="4">NEW: Gem & Mineral Faire<br></font></i></b>
-																		Instead of our annual Gem Show, which is held at the fairgrounds, the Calaveras Gem and Mineral Society will hold a new, outdoor event at our club house!
+    <!-- Members Area Link -->
+    <div class="members-link">
+      <a href="members.html"><u>MEMBERS AREA</u></a>
+    </div>
 
-																		<br>It will be a version of the Gem Show and the Tailgate combined!<br>
-																		There will be food, display cases, rock sales, a raffle and kid's activities. Sonora's Reich's Outpost will be there with their food truck providing grub! This event will be open to members of all rock clubs and in addition, we will be inviting our regular show vendors.																	</td>
-																		<br>
-															</tr>-->
-                                <tr>
-                                    <td valign="top" width="33%"> <img alt="Lapidary Shop" src="images/lap_indx.jpg" height="167" width="200">&nbsp;</td>
-                                    <!---LAPIDARY SHOP--->
-                                    <td valign="top" width="67%"><b><i><font color="#005100" face="Verdana" size="4">Lapidary Shop</font></i></b>
-									                           <br>The club has a lapidary shop, which includes several rock and trim saws, cabbing units and polishers.<br><br>
-                                                 Regular shop hours are on Saturdays, 10AM to 2PM. During this time, club members can provide instruction for other members
-																								 or work on their own projects.
-                                                 <!-- <font color="#FF0000"><b>NOTE: The shop will be CLOSED on April 20th, 2019 due to Easter & rescheduled General Meeting.</b></font> -->
-                                                 <i><b><font size="1" face="Verdana"><a href="shopschedule.html"><br><br><u>MORE SHOP INFORMATION</u></a></i><br>
-																								 <i><font size="1" face="Verdana"><a href="lapidary.html"><u>MORE ABOUT LAPIDARY</u></a></font></b></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" height="94">
-                    									<b><i><font color="#005100" face="Verdana" size="4">Field Trips<br></font></i></b>
-                    									The club is working on dates for future field trips. In addition to sponsoring its own field trips, its members are welcome to attend trips hosted by other Field Trip Chairmen's Association ("Co-op") clubs and the California Federation of Mineralogical Societies (CFMS). <i><b><font size="1"face="Verdana"><a href="field.html"><u>MORE ABOUT FIELD TRIPS</u></a></font><b></i><br>
-																			<br>
-																		</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><font color="#005100" face="Verdana" size="4"><i><b>Gem Show<br></b></i></font>
-                                      <!--Join us at our <i>NEXT SHOW</i> <big><font style="color: rgb(0, 0, 153);"><b>March 28 & 29, 2020</b></big></font>
-                                      --><!--  <font face="Verdana" size="2">Our last show was held on March 23 & 24, 2019. We wish to thank our Dealers and all who attended. -->
+    <!-- Main Content Area -->
+    <main>
+      <div id="page-content" class="content content-section">
+        <!-- Page content loaded here -->
+      </div>
+    </main>
 
-																			At our shows, vendors sell mineral specimens, jewelry,
-																			gems, beads, fossils, petrified wood, lapidary material, meteorites,
-																			tools and supplies for making jewelry and more.&nbsp;<br><br>
-																			Our show includes a kid's area, exhibit cases, demonstrations, silent auctions, door prizes and a raffle. Admission is $7.00 per person. Kids under 12 are free with an adult. <i><font face="Verdana" size="1"><b><u><a href="show.html">MORE ABOUT OUR SHOW</a></u></b></font></i></font>
-																		</td>
-																		<br>
-                                </tr>
-                                <tr>
-                                  <td colspan="2" style="vertical-align: top;"><font color="#005100" face="Verdana" size="4"><i><b><br>
-                                  Tailgate Swap<br></b></i>
-																	<span style="color: black;">The club hosts a tailgate swap twice a year.&nbsp;</span> <span style="color: black;">This is a very fun event
-                                  that is held at our clubhouse. Club Members bring their items to the parking lot of the clubhouse for all to buy, sell or swap.</span></small></small></font> <font face="Verdana" size="1"><b><font color="#CC9900" face="Verdana" size="1"><a href=
-                                  "map_clubhouse.html"><u>MAP TO CLUBHOUSE</u></a>&nbsp;</font></b></font>
-																	<br>
-                                </span></small></small></font>
-																</td>
-                                </tr>
-                                <tr>
-                                  <td colspan="2" style="vertical-align: top;"><br></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                          <td colspan="2" valign="top" width="715">
-                            <table border="0" cellpadding="3" cellspacing="0" id="table5" width="700">
-                              <tbody>
-                                <tr>
-                                  <td align="center" valign="top" width="100%"><b><a href="map_clubhouse.html"><font face="Verdana" size="1"><u>MAP TO CLUBHOUSE</u></font></a></b> <font face="Verdana" size=
-                                  "2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font> <a href="mem-enter.html"><font face="Verdana" size="1"><u><b>MEMBERS AREA</b> (password-protected)</u></font></a> <font face=
-                                  "Verdana" size="2"><br></font> <font face="Verdana" size="1">&nbsp;</font><br>
-                                  <font face="Verdana" size="2"><u><a href="index.html"><u><font color="#DC4B05">Home</font></u></a></u> &nbsp;&nbsp;&nbsp;&nbsp;<a href=
-                                  "history.html"><u>History</u></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="membership.html"><u>Membership</u></a>&nbsp;&nbsp; <a href="lapidary.html"><u>Lapidary</u></a>&nbsp;&nbsp;
-                                  <a href="field.html"><u>Field Trips</u></a>&nbsp;&nbsp;&nbsp; <a href="show.html"><u>Gem Show</u></a>&nbsp;&nbsp;&nbsp; <a href="links.html"><u>Links</u></a>&nbsp;&nbsp;&nbsp;
-                                  <a href="contact.html"><u>Contact</u></a></font><br>
-                                  <a href="index.html#top"><font face="Verdana" size="2">Top of Page</font></a><br>
-                                  <br>
-                                  <b><font face="Verdana" size="2">Calaveras Gem and Mineral Society,&nbsp; P. O. Box 517, Angels Camp, CA 95222</font></b></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </body>
-                </html>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-nav">
+        <a href="map_clubhouse.html"><u>MAP TO CLUBHOUSE</u></a> | 
+        <a href="members.html"><u>MEMBERS AREA</u></a>
+      </div>
+      
+      <nav class="footer-nav">
+        <a href="index.html"><u>Home</u></a> | 
+        <a href="history.html"><u>History</u></a> | 
+        <a href="membership.html"><u>Membership</u></a> | 
+        <a href="lapidary.html"><u>Lapidary</u></a> | 
+        <a href="field.html"><u>Field Trips</u></a> | 
+        <a href="show.html"><u>Gem Show</u></a> | 
+        <a href="links.html"><u>Links</u></a> | 
+        <a href="contact.html"><u>Contact</u></a>
+      </nav>
+      
+      <p class="top-link"><a href="#"><u>Top of Page</u></a></p>
+      
+      <p class="org-info">Calaveras Gem and Mineral Society, P.O. Box 517, Angels Camp, CA 95222</p>
+    </footer>
+  </div>
+
+  <!-- Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

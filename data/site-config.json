@@ -1,0 +1,103 @@
+{
+  "pages": [
+    {
+      "id": "index",
+      "title": "Calaveras Gem & Mineral Society, Angels Camp, CA",
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "id": "history",
+      "title": "Club History - Calaveras Gem & Mineral Society",
+      "label": "History",
+      "href": "history.html"
+    },
+    {
+      "id": "membership",
+      "title": "Membership - Calaveras Gem & Mineral Society",
+      "label": "Membership",
+      "href": "membership.html"
+    },
+    {
+      "id": "lapidary",
+      "title": "Lapidary Shop - Calaveras Gem & Mineral Society",
+      "label": "Lapidary",
+      "href": "lapidary.html"
+    },
+    {
+      "id": "field",
+      "title": "Field Trips - Calaveras Gem & Mineral Society",
+      "label": "Field Trips",
+      "href": "field.html"
+    },
+    {
+      "id": "show",
+      "title": "Gem Show - Calaveras Gem & Mineral Society",
+      "label": "Gem Show",
+      "href": "show.html"
+    },
+    {
+      "id": "links",
+      "title": "Links - Calaveras Gem & Mineral Society",
+      "label": "Links",
+      "href": "links.html"
+    },
+    {
+      "id": "contact",
+      "title": "Contact - Calaveras Gem & Mineral Society",
+      "label": "Contact",
+      "href": "contact.html"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "index.html",
+      "id": "index"
+    },
+    {
+      "label": "History",
+      "href": "history.html",
+      "id": "history"
+    },
+    {
+      "label": "Membership",
+      "href": "membership.html",
+      "id": "membership"
+    },
+    {
+      "label": "Lapidary",
+      "href": "lapidary.html",
+      "id": "lapidary"
+    },
+    {
+      "label": "Field Trips",
+      "href": "field.html",
+      "id": "field"
+    },
+    {
+      "label": "Gem Show",
+      "href": "show.html",
+      "id": "show"
+    },
+    {
+      "label": "Links",
+      "href": "links.html",
+      "id": "links"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html",
+      "id": "contact"
+    }
+  ],
+  "site": {
+    "name": "Calaveras Gem & Mineral Society",
+    "location": "Angels Camp, California",
+    "address": "P.O. Box 517, Angels Camp, CA 95222",
+    "email": "calaverasgemandmineralsociety@gmail.com",
+    "founded": "1948",
+    "logo": "images/logo150.jpg",
+    "tagline": "Established in 1948, the Calaveras Gem and Mineral Society continues to flourish and carry out its purpose of sharing knowledge and interests in Rocks and Minerals, both among members and with the public. Calaveras Gem and Mineral Society is a member of the California Federation of Mineralogical Societies (CFMS)"
+  }
+}

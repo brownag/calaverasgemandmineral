@@ -1,0 +1,533 @@
+/* Calaveras Gem & Mineral Society - Refactored Stylesheet */
+
+:root {
+  /* Color palette - preserved from original */
+  --color-primary-green: #005100;
+  --color-bright-green: #008000;
+  --color-light-green: #95ff95;
+  --color-bright-yellow: #99ff33;
+  --color-nav-bg: #f2eb8c;
+  --color-accent-orange: #dc4b05;
+  --color-brown-links: #005100;
+  --color-visited-links: #7d5f00;
+  --color-light-yellow: #fcf983;
+  --color-faint-yellow: #faf7cf;
+  --color-dark-green: #004000;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  /* Typography */
+  --font-family: Verdana, Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-size-small: 12px;
+  --font-size-large: 18px;
+  --font-size-xlarge: 24px;
+  
+  /* Layout */
+  --site-width: 700px;
+  --nav-width: 150px;
+  --content-width: 546px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--color-white);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Link colors */
+a {
+  color: var(--color-brown-links);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-visited-links);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-accent-orange);
+}
+
+/* Main container */
+#site-container {
+  width: var(--site-width);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section */
+header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 150px;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+.header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.site-title {
+  color: var(--color-primary-green);
+  font-size: var(--font-size-xlarge);
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.site-subtitle {
+  color: var(--color-primary-green);
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  font-style: italic;
+}
+
+.header-tagline {
+  font-size: var(--font-size-small);
+  color: var(--color-primary-green);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.show-banner {
+  background-color: var(--color-bright-green);
+  border: 2px solid #FFCC00;
+  padding: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.show-banner h3 {
+  color: var(--color-light-yellow);
+  font-size: var(--font-size-large);
+  margin: 0 0 5px 0;
+}
+
+.show-banner p {
+  color: var(--color-light-yellow);
+  margin: 5px 0;
+  font-size: var(--font-size-base);
+}
+
+/* Navigation bar */
+nav.main-nav {
+  background-color: var(--color-nav-bg);
+  border: 1px solid #EADA68;
+  margin-bottom: 15px;
+}
+
+nav.main-nav table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+nav.main-nav td {
+  text-align: center;
+  padding: 8px 2px;
+  width: 12.5%;
+  border-right: 1px solid #ccc;
+}
+
+nav.main-nav td:last-child {
+  border-right: none;
+}
+
+nav.main-nav a {
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  display: block;
+}
+
+nav.main-nav a.active {
+  color: var(--color-accent-orange);
+}
+
+/* Members area link */
+.members-link {
+  text-align: right;
+  padding: 8px 10px;
+  font-size: var(--font-size-small);
+}
+
+.members-link a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Main content area */
+main {
+  display: flex;
+  gap: 0;
+  flex: 1;
+}
+
+/* Sidebar navigation (for show pages) */
+aside.sidebar {
+  background-color: var(--color-bright-green);
+  width: var(--nav-width);
+  border: 1px solid #FFCC00;
+  flex-shrink: 0;
+}
+
+aside.sidebar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+aside.sidebar td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid var(--color-bright-green);
+  color: var(--color-white);
+}
+
+aside.sidebar a {
+  color: var(--color-light-yellow);
+  text-decoration: underline;
+}
+
+aside.sidebar p {
+  color: var(--color-white);
+  font-size: var(--font-size-small);
+  margin: 8px 0;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 0;
+  background-color: var(--color-white);
+}
+
+.content-section {
+  padding: 15px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary-green);
+  font-weight: bold;
+  font-style: italic;
+  margin: 15px 0 10px 0;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+  margin: 10px 0 10px 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 4px;
+  vertical-align: top;
+}
+
+/* Show pages - navigation buttons */
+.show-nav-buttons {
+  background-color: var(--color-bright-yellow);
+  padding: 0;
+  text-align: center;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.show-nav-buttons table {
+  width: 100%;
+  background-color: var(--color-bright-yellow);
+}
+
+.show-nav-buttons td {
+  text-align: center;
+  width: 16.67%;
+  padding: 2px;
+}
+
+.show-nav-buttons img {
+  display: block;
+  height: 20px;
+  width: auto;
+  max-width: 90px;
+  border: none;
+}
+
+/* Footer */
+footer {
+  border-top: 3px solid #999;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: var(--font-size-small);
+  margin-top: 20px;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+.footer-nav {
+  font-size: var(--font-size-small);
+  margin: 10px 0;
+}
+
+.footer-nav a {
+  margin: 0 8px;
+  text-decoration: underline;
+}
+
+.top-link {
+  margin-top: 10px;
+  font-size: var(--font-size-small);
+}
+
+.org-info {
+  font-weight: bold;
+  font-size: var(--font-size-small);
+  margin-top: 10px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.padding-vertical {
+  padding: 20px 0;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
+
+.margin-bottom {
+  margin-bottom: 15px;
+}
+
+.color-primary {
+  color: var(--color-primary-green);
+}
+
+.color-accent {
+  color: var(--color-accent-orange);
+}
+
+.color-green {
+  color: var(--color-bright-green);
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image with left alignment */
+img.float-left {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* Club house and content images */
+.content-image {
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+
+/* Special banner boxes */
+.banner-box {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 15px 0;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.banner-box.highlight {
+  background-color: #f9f9f9;
+  border-color: var(--color-nav-bg);
+}
+
+/* Meeting text section */
+.meeting-info {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.meeting-info img {
+  flex-shrink: 0;
+  width: 200px;
+  height: auto;
+}
+
+.meeting-details {
+  flex: 1;
+}
+
+.meeting-details p {
+  color: var(--color-bright-green);
+  font-weight: bold;
+  font-size: var(--font-size-base);
+  margin: 5px 0;
+}
+
+.meeting-details .shop-hours {
+  color: #0066cc;
+  font-size: var(--font-size-small);
+}
+
+/* Show page content layout */
+.show-content {
+  background-color: var(--color-light-green);
+  border: 1px solid var(--color-nav-bg);
+  padding: 15px;
+}
+
+.show-content h2 {
+  color: var(--color-bright-green);
+  font-size: 20px;
+}
+
+.show-content p {
+  color: var(--color-dark-green);
+}
+
+.frog-button {
+  width: 54px;
+  height: 37px;
+  margin: 5px;
+}
+
+/* Features list (show page features) */
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.features-list img {
+  flex-shrink: 0;
+  width: 54px;
+  height: 37px;
+}
+
+.features-list-text {
+  color: var(--color-dark-green);
+  font-size: var(--font-size-base);
+}
+
+/* Print styles */
+@media print {
+  body {
+    padding: 0;
+  }
+  
+  #site-container {
+    box-shadow: none;
+  }
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
